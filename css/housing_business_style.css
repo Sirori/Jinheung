@@ -1,0 +1,100 @@
+/* reset */
+* {margin: 0;padding: 0;}
+body {font-family: 'NanumSquareLight';
+    font-family: 'NanumSquare';
+    font-family: 'NanumSquareBold';
+    font-family: 'NanumSquareExtraBold';}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0; font-family: 'NanumSquare';}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/* layout */
+.wrap {width: 100%; overflow: hidden; font-family: 'Noto Sans KR', sans-serif;}
+header{width: 100%; height: 100px; line-height: 100px; position: fixed; z-index: 100;}
+.innerHeader {width: 95%; margin: 0 auto;}
+.innerHeader h1 {float: left; font-size: 30px; color: #FFF;}
+.innerHeader .menuOpen {display: block; float: right;}
+
+/* titleBox */
+.titleBox {width: 1400px; margin:0 auto;}
+.titleBox .inner {width: 100%; margin-top: 150px; margin-bottom: 100px;}
+.titleBox .inner span {font-size: 20px; font-family: NanumSquareBold;}
+.titleBox .inner h2 {margin-top: 38px; margin-left: -10px; margin-bottom: 20px; font-size: 70px; font-family: NanumSquareBold;}
+.titleBox .inner p {font-size: 20px; line-height: 28px; font-weight: normal; color: #888089;}
+/* animation */
+@keyframes top_ani {
+    0% {opacity: 0; transform: translateY(-50px);}
+    30% {opacity: 0; transform: translateY(-50px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+.titleBox {animation-name: top_ani; animation-duration: 1.5s;}
+
+
+/* category */
+.category ul {width: 1400px; margin: 0 auto; display: flex;}
+.category ul:nth-child(1) {background: white;}
+.category ul li {width: 20%; text-align: center; font-family: NanumSquareBold;}
+.category ul li a {width: 100%; display: inline-block; font-size: 20px; font-weight: bold; color:#887D78; padding: 0 auto; padding-top: 20px; padding-bottom: 20px; background: #F8F8F8; border-bottom: 1px solid #D8D8D8; border-left: 1px solid #D8D8D8;}
+.category ul li .first {background: white; color:#DA2128; border-left: 1px solid #D8D8D8; border-bottom: none; border-top: 2px solid #DA2128;}
+
+/* main */
+.main {width: 100%; overflow: hidden; margin-bottom: 50px;}
+.main .inner {width: 1400px; margin: 70px auto; overflow: hidden;}
+.main .inner .imgBox {width: 70%; float: left;}
+.main .inner .txtBox {width: 30%; float: left;}
+.main .inner .txtBox h3 {font-size: 45px; line-height: 50px; margin-bottom: 28px;}
+.main .inner .txtBox span {font-size: 17px; color: #888089;}
+.main .inner .txtBox p {margin-top: 57px; font-size: 17px; line-height: 20px; color: #888089; font-weight: 300;}
+/* animation */
+@keyframes mid_ani {
+    0% {opacity: 0; transform: translateX(-50px);}
+    30% {opacity: 0; transform: translateX(-50px);}
+    100% {opacity: 1; transform: translateX(0);}
+}
+.category {animation-name: top_ani; animation-duration: 1.5s;}
+.main {animation-name: mid_ani; animation-duration: 1.5s;}
+
+/* sub */
+.sub {width: 100%; overflow: hidden;}
+.sub .inner {width: 1400px; overflow: hidden; margin: 0 auto; padding-bottom: 70px;}
+.sub .inner ul {width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.sub .inner ul li {width: 30%; margin-bottom: 90px;}
+.sub .inner ul li a img {margin-bottom: 20px; position: relative;}
+.sub .inner ul li a .txt {font-size: 23px; font-weight: 400; margin-bottom: 15px;}
+.sub .inner ul li .date {font-size: 17px; letter-spacing: -2px; font-weight: 300; color: #897E78;}
+/* hover */
+.sub .inner ul li a img:hover, .sub .inner ul li a img:focus {opacity: 60%; transition: all 0.3s; }
+/* animation */
+@keyframes slide-down {
+    0% {opacity: 0;}
+    40% {opacity: 0; transform: translateY(-50px);}
+}
+.sub.motion {animation-name: slide-down; animation-duration: 1.4s;}
+.sub .inner ul .bottom_li.motion {animation-name: slide-down; animation-duration: 1.4s;}
+
+/* more */
+.moreinner {width: 1400px; margin:0 auto; padding-bottom: 200px;}
+.moreinner p {display: block; text-align: center; margin:0 auto;}
+.moreinner p .more {display:inline-block; box-sizing: border-box; margin-right: 30px; width: 150px; height: 50px; border-radius: 45px; border:1px solid #999; padding-top: 14px; font-size: 18px;}
+.moreinner .more p i {padding-left: 5px;}
+/* hover */
+.moreinner p .more:hover, .moreinner p .more:focus {background: rgb(255, 119, 0); transition:all 0.5s; color:#fff}
+
+/* footer */
+.footer .innerBox {width: 100%; height: 470px; background:#313131;}
+.footer .innerBox .top {width: 85%; display:flex; margin: 0 auto; padding-top: 60px;}
+.footer .innerBox .top .logo {width: 20%;}
+.footer .innerBox .top .right {width: 75%; margin-left: 100px; display: flex;}
+.footer .innerBox .top ul {width: 100%; display: flex; flex-direction: column; color: #FFF; margin-right: 30px;}
+.footer .innerBox .top ul p {font-size: 18px; font-weight: 600; margin-bottom: 10px;}
+.footer .innerBox .top ul li {width: 80%; display: flex; margin-top: 10px; font-size: 14px; font-weight: 500; margin-bottom: 5px;}
+.footer .innerBox .bottom {width: 85%; margin:0 auto; margin-top: 100px; color: #FFF; font-size: 15px; line-height: 30px; font-weight: 200;}
+.footer .innerBox .bottom .botleft {float: left;}
+.footer .innerBox .bottom .botright {float: right; margin-right: 70px; position: relative;}
+.footer .innerBox .bottom .botright::before {position: absolute; content: ''; width: 112%; height: 5px; top:100%; right: -6px; border-top: 2px solid #919191}

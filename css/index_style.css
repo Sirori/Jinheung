@@ -1,0 +1,472 @@
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: bold;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf")
+      format("truetype");
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "NanumSquareLight";
+  font-family: "NanumSquare";
+  font-family: "NanumSquareBold";
+  font-family: "NanumSquareExtraBold";
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  font-family: "NanumSquare";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-size: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+img {
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+li {
+  list-style: none;
+}
+address,
+em,
+i {
+  font-style: normal;
+}
+a:focus {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+
+/* layout */
+.wrap {
+  width: 100%;
+  overflow: hidden;
+  font-family: "Noto Sans KR", sans-serif;
+}
+header {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  position: fixed;
+  z-index: 100;
+}
+.innerHeader {
+  width: 95%;
+  margin: 0 auto;
+}
+.innerHeader h1 {
+  float: left;
+  font-size: 30px;
+  color: #fff;
+}
+.innerHeader .menuOpen {
+  display: block;
+  float: right;
+}
+
+/* .visual */
+.visual {
+  width: 100%;
+  background: url(/index_img/main.png) center/cover;
+  height: 80vh;
+  padding-top: 250px;
+}
+.visual .inner {
+  width: 1600px;
+  margin: 0 auto;
+}
+.visual .inner .tit {
+  font-size: 100px;
+  color: #fff;
+  font-family: NanumBarunGothic;
+  font-weight: normal;
+}
+.visual .inner .txt2 {
+  padding-top: 60px;
+  padding-left: 20px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+}
+
+/* animation */
+@keyframes visual_ani {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.visual .inner {
+  animation-name: visual_ani;
+  animation-duration: 1.2s;
+}
+
+/* .main */
+.main {
+  width: 100%;
+}
+.main .maininner {
+  width: 100%;
+  margin-top: 158px;
+  margin-left: 293px;
+}
+.main .maininner .tit {
+  font-size: 70px;
+  font-family: NanumSquareBold;
+}
+.main .maininner ul {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 53px;
+}
+.main .maininner ul li {
+  width: 100%;
+  margin-left: 32px;
+}
+.main .maininner ul li:nth-child(1) {
+  margin-left: 0;
+}
+.main .maininner ul li .imgBox {
+  width: 521px;
+  height: 692px;
+}
+.main .maininner ul li .txtbox {
+  font-size: 18px;
+  margin-top: 34px;
+}
+.main .maininner ul li .txtbox span {
+  font-size: 23px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 12px;
+}
+/* hover */
+.main .maininner ul li .imgBox:hover,
+.main .maininner ul li .imgBox:focus {
+  opacity: 60%;
+  transition: all 0.5s;
+}
+/* animation */
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+.main .maininner .tit.motion {
+  animation-name: slide-down;
+  animation-duration: 0.5s;
+}
+.main .maininner ul li.motion:nth-child(1) {
+  animation-name: slide-down;
+  animation-duration: 1s;
+}
+.main .maininner ul li.motion:nth-child(2) {
+  animation-name: slide-down;
+  animation-duration: 1.3s;
+}
+.main .maininner ul li.motion:nth-child(3) {
+  animation-name: slide-down;
+  animation-duration: 1.6s;
+}
+
+/* .submain */
+.submain {
+  width: 100%;
+  padding: 219px 0;
+  margin-bottom: 100px;
+  position: relative;
+}
+.submain::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 79.4%;
+  width: 100%;
+  height: 5px;
+  border-top: 2px dotted #eeeeee;
+}
+.submain .submainInner {
+  width: 1228px;
+  margin: 0 auto;
+  position: relative;
+}
+.submain .submainInner .imgBox {
+  width: 100%;
+}
+.submain .submainInner .imgBox img {
+  width: 95%;
+}
+.submain .submainInner .tit {
+  font-size: 100px;
+  font-family: "NanumSquareBold";
+  font-weight: bold;
+  color: #dbdbdb;
+  text-align: right;
+  line-height: 120px;
+  position: absolute;
+  top: 0px;
+  right: -130px;
+}
+.submain .submainInner .bottom {
+  width: 95%;
+  margin-top: 18px;
+}
+.submain .submainInner .bottom .left {
+  float: left;
+  font-size: 54px;
+  font-weight: bold;
+}
+.submain .submainInner .bottom .right {
+  float: right;
+  font-size: 15px;
+}
+.submain .submainInner ul {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 293px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.submain .submainInner ul {
+  width: 90%;
+}
+.submain .submainInner ul .roundimg {
+  padding-bottom: 30px;
+}
+.submain .submainInner ul li .business {
+  font-size: 26px;
+}
+/* hover */
+.submain .submainInner .tit a:hover {
+  color: orange;
+  transition: all 0.5s;
+}
+
+/* animation */
+.submain .submainInner .imgBox.motion {
+  animation-name: slide-down;
+  animation-duration: 1s;
+}
+.submain .submainInner .tit.motion {
+  animation-name: slide-down;
+  animation-duration: 1s;
+}
+.submain .submainInner .bottom.motion {
+  animation-name: slide-down;
+  animation-duration: 1.2s;
+}
+
+/* bottom */
+.bottom {
+  width: 100%;
+  overflow: hidden;
+}
+.bottomvisual {
+  width: 100vw;
+  height: 1050px;
+  background: url(/index_img/bottom.png) center/cover no-repeat;
+  overflow: hidden;
+}
+.bottomvisual .bottxt {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 230px;
+  font-size: 72px;
+  color: #fff;
+  line-height: 100px;
+  font-weight: 500;
+  position: relative;
+}
+.bottomvisual .bottxt .subtxt {
+  margin: 30px auto;
+  font-size: 20px;
+  color: #fff;
+  font-weight: normal;
+  line-height: 40px;
+}
+.bottomvisual .bottxt::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  top: 82.5%;
+  border-top: 2px solid #eeeeee;
+}
+
+/* footer */
+.footer .innerBox {
+  width: 100%;
+  height: 470px;
+  background: #313131;
+}
+.footer .innerBox .top {
+  width: 85%;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.footer .innerBox .top .logo {
+  width: 20%;
+}
+.footer .innerBox .top .right {
+  width: 75%;
+  margin-left: 100px;
+  display: flex;
+}
+.footer .innerBox .top ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-right: 30px;
+  overflow: hidden;
+}
+.footer .innerBox .top ul p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.footer .innerBox .top ul li {
+  width: 80%;
+  display: flex;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.footer .innerBox .bottom {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 100px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 200;
+}
+.footer .innerBox .bottom .botleft {
+  float: left;
+}
+.footer .innerBox .bottom .botright {
+  float: right;
+  margin-right: 70px;
+  position: relative;
+}
+.footer .innerBox .bottom .botright::before {
+  position: absolute;
+  content: "";
+  width: 112%;
+  height: 5px;
+  top: 100%;
+  right: -6px;
+  border-top: 2px solid #919191;
+}

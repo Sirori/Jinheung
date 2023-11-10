@@ -1,0 +1,98 @@
+/* reset */
+* {margin: 0;padding: 0;}
+body {font-family: 'NanumSquareLight';
+    font-family: 'NanumSquare';
+    font-family: 'NanumSquareBold';
+    font-family: 'NanumSquareExtraBold';}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0; font-family: 'NanumSquare';}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/* layout */
+.wrap {width: 100%; overflow: hidden; font-family: 'Noto Sans KR', sans-serif;}
+header{width: 100%; height: 100px; line-height: 100px; position: fixed; z-index: 100;}
+.innerHeader {width: 95%; margin: 0 auto;}
+.innerHeader h1 {float: left; font-size: 30px; color: #FFF;}
+.innerHeader .menuOpen {display: block; float: right;}
+
+/* main */
+.main {width: 1400px; margin:0 auto; padding: 200px 0;}
+.main .inner .txtBox h2 {font-size: 70px; font-family: NanumSquareBold; padding-bottom: 20px; font-weight: 500; color: black;}
+.main .inner .txtBox .tit {font-size: 23px; line-height: 34px; color:#9B9B9B; padding-bottom: 50px;}
+.main .photo {width: 100%; display:flex; padding-bottom: 100px;}
+.main .photo li:nth-child(2) {padding-left: 30px;}
+/* animation */
+@keyframes main_ani {
+    0% {opacity: 0; transform: translateY(-30px);}
+    30% {opacity: 0; transform: translateY(-30px);}
+    100% {opacity: 1; transform: translateY(0px);}
+}
+.main .inner .txtBox {animation-name: main_ani; animation-duration: 1.3s;}
+@keyframes mainimg_ani {
+    0% {opacity: 0; transform: translateX(30px);}
+    30% {opacity: 0; transform: translateX(30px);}
+    100% {opacity: 1; transform: translateX(0px);}
+}
+.main .inner .photo {animation-name: mainimg_ani; animation-duration: 1.3s;}
+
+/* global */
+.global {width: 100%;}
+.global .inner {width: 1400px; height: 1300px; margin: 0 auto;}
+.global .inner .txtBox .tit {font-size: 56px; margin-bottom: 30px; letter-spacing: 50;}
+.global .inner .txtBox .txt {font-size: 30px; color: #E44F4F; margin-bottom: 350px; padding-left: 15px; letter-spacing: 50;}
+.global .inner .circlebox {width: 800px; margin: 0 auto; padding: 50px 0; position: relative;}
+.global .inner .circlebox .dotCircle {position: absolute; left: 25%; top:0; width: 450px; height: 450px;}
+.global .inner .circlebox .dotCircle span {position:absolute; display: inline-block; width: 12px; height: 12px; background:#265BA7; border-radius: 50%; position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%);}
+.global .inner .circlebox .dotCircle span.aa {left: 8%; top:65%;}
+.global .inner .circlebox .dotCircle span.bb {left: 44%; top: 5%;}
+.global .inner .circlebox .dotCircle span.cc {left: 80%; top: 65%;}
+.global .inner .circlebox h2 {font-size: 50px; width: 303px; height: 283px; text-align: center; font-family: NanumSquareBold; border-radius: 50%; margin: 0 auto; letter-spacing: 2px; border: 1px solid #707070; background: #FFF;position: relative; padding-top: 20px;}
+.global .inner .circlebox h2::before {position: absolute; width: 420px; height: 420px; background:#E3E3E3; content: ''; left: -20%; top: -19%; border-radius: 50%; z-index: -100;}
+.global .inner .circlebox h2::after {position: absolute; width: 550px; height: 550px; content: ''; left: -42%;top:-40%; border-radius: 50%; z-index: -100; border: 1px dotted #707070; opacity: 30%;}
+.global .inner .circlebox h2 span {font-size: 25px; display: block; padding-top: 60px; color:#888; font-weight: normal;}
+.global .inner .posCircle {width: 800px; margin:0 auto; position: relative;top:-670px; width: 600px; height: 600px; font-size: 23px; text-align: center;}
+.global .inner .posCircle .a {position:absolute; display: inline-block; width: 200px; height: 200px; background:#265BA7; border-radius: 50%; color: #FFF; left:33%; padding-top: 75px; box-sizing: border-box;}
+.global .inner .posCircle .b {position:absolute; display: inline-block; width: 200px; height: 200px; background:#265BA7; border-radius: 50%; color: #FFF; left:-20%; top:95%; padding-top: 75px; box-sizing: border-box;}
+.global .inner .posCircle .c {position:absolute; display: inline-block; width: 200px; height: 200px; background:#265BA7; border-radius: 50%; color: #FFF; right:-19%; top:95%; padding-top: 75px; box-sizing: border-box;}
+/* animation */
+@keyframes slide-down {
+    0% {opacity: 0;}
+    40% {opacity: 0; transform: translateY(-50px);}
+}
+.global .inner.motion {animation-name: slide-down; animation-duration: 1s;}
+
+
+/* contents */
+.contents {width: 1400px; margin: 50px auto; padding-bottom: 250px;}
+.contents .title {width: 1400px; font-family: NanumSquareBold; font-size: 45px; font-weight: bold; margin-bottom: 150px;}
+.contents ul {width: 1300px; display: flex; justify-content: space-between; margin: 0 auto;}
+.contents ul li {width: 23.5%; padding: 40px; font-size: 16px; line-height: 40px; box-sizing: border-box; border:3px solid #3566AD; border-radius: 40px; position: relative;}
+.contents ul li .tit {width: 50%; margin:0 auto; padding: 10px 0; box-sizing: border-box; border-radius: 100px; background-color: #3566AD; font-size: 25px; color: white; text-align: center; position: absolute; top:-30px; left:71px;}
+.contents ul li .txt {font-size: 20px;}
+.contents ul li img {width: 70%; text-align: center; padding: 30px 30px; line-height: 40px;}
+/* animation */
+.contents .title.motion {animation-name: slide-down; animation-duration: 0.9s;}
+.contents ul li:nth-child(1).motion {animation-name: slide-down; animation-duration: 1.1s;}
+.contents ul li:nth-child(2).motion {animation-name: slide-down; animation-duration: 1.4s;}
+.contents ul li:nth-child(3).motion {animation-name: slide-down; animation-duration: 1.7s;}
+.contents ul li:nth-child(4).motion {animation-name: slide-down; animation-duration: 2s;}
+
+
+/* footer */
+.footer .innerBox {width: 100%; height: 470px; background:#313131;}
+.footer .innerBox .top {width: 85%; display:flex; margin: 0 auto; padding-top: 60px;}
+.footer .innerBox .top .logo {width: 20%;}
+.footer .innerBox .top .right {width: 75%; margin-left: 100px; display: flex;}
+.footer .innerBox .top ul {width: 100%; display: flex; flex-direction: column; color: #FFF; margin-right: 30px;}
+.footer .innerBox .top ul p {font-size: 18px; font-weight: 600; margin-bottom: 10px;}
+.footer .innerBox .top ul li {width: 80%; display: flex; margin-top: 10px; font-size: 14px; font-weight: 500; margin-bottom: 5px;}
+.footer .innerBox .bottom {width: 85%; margin:0 auto; margin-top: 100px; color: #FFF; font-size: 15px; line-height: 30px; font-weight: 200;}
+.footer .innerBox .bottom .botleft {float: left;}
+.footer .innerBox .bottom .botright {float: right; margin-right: 70px; position: relative;}
+.footer .innerBox .bottom .botright::before {position: absolute; content: ''; width: 112%; height: 5px; top:100%; right: -6px; border-top: 2px solid #919191}
